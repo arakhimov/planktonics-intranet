@@ -1,0 +1,27 @@
+.Message {
+  background-color: steelblue;
+  display: inline-block;
+  max-width: 80%;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.Message:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.Message__author {
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.Message__text {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.Message__date {
+  text-transform: uppercase;
+  float: right;
+  margin-left: 10px;
+}

@@ -1,0 +1,9 @@
+.Chat {
+  flex-grow: 2;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}

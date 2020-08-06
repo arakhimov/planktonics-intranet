@@ -1,0 +1,19 @@
+.form {
+  align-self: stretch;
+  display: flex;
+  border: none;
+  outline: none;
+  min-height: 50px;
+}
+
+.form__textarea {
+  flex-grow: 2;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.form__button {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}

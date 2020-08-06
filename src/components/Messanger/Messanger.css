@@ -1,0 +1,37 @@
+.Messanger {
+  width: 80vw;
+  max-width: 1440px;
+  min-height: 95vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.Messanger__header {
+  height: 80px;
+  box-sizing: border-box;
+  background-color: steelblue;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.Messanger__main {
+  display: flex;
+  flex-grow: 2;
+  background-color: tomato;
+  border-radius: 10px;
+}
+
+.Messanger__footer {
+  height: 80px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: steelblue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
