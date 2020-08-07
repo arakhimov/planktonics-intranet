@@ -1,8 +1,6 @@
 .form {
   align-self: stretch;
   display: flex;
-  border: none;
-  outline: none;
   min-height: 50px;
 }
 
@@ -10,10 +8,17 @@
   flex-grow: 2;
   border-radius: 10px;
   margin-right: 10px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .form__button {
   border-radius: 10px;
   border: none;
   outline: none;
+  background-color: steelblue;
+  color: #fef6eb;
+  cursor: pointer;
 }

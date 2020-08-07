@@ -1,9 +1,10 @@
 .ChatList {
-  width: 25%;
-  background-color: teal;
-  border-radius: 10px;
+  width: 30%;
   display: flex;
   flex-direction: column;
   padding: 10px;
   box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #1c1d25;
+  border: 1px solid #fef6eb;
 }

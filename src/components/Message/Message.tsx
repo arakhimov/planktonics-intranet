@@ -1,28 +1,37 @@
 import React from 'react';
 import './Message.css';
 import { message } from '../../types';
-import { months } from '../../constants/constants';
+import { DeleteIcon } from '../DeleteIcon/DeleteIcon';
+import { translateDate, textOptions, messageText } from '../../utils/utils';
 
 type MessageProps = {
-  message: message
+  message: message, 
+  currentUser: string,
+  deleteMessage: (idMessage: string) => void,
 };
 
-// получение даты из timestamp и изменение формата даты
-function translateDate(timestamp: number): string {
-  const messageDate = new Date(timestamp);
-  const day = messageDate.getDate();
-  const month = months[messageDate.getMonth()];
-  const year = messageDate.getFullYear();
-  return `${day} ${month} ${year}`;
-}
+export const Message: React.FC<MessageProps> = ({ message, currentUser, deleteMessage }) => {
 
-export const Message: React.FC<MessageProps> = ({ message }) => {
+  // удаление добавленных сообщений
+  const handleClickDelete = (event: React.MouseEvent<HTMLElement>): void => {
+    const target = event.target as HTMLElement;
+    if (target.classList.contains('DeleteIcon')) {
+      deleteMessage(message.id);
+    }
+  }
+
   return (
-    <div className="Message">
-      <h3 className="Message__author">{message.author}</h3>
-      <p className="Message__text">{message.text}
-        <time className="Message__date">{translateDate(message.date)}</time>
-      </p>
+    <div>
+      <div onClick={ handleClickDelete } className="Message">
+        <header className="Message__header">
+          <h3 className="Message__author">{message.author}</h3>
+          {message.author === currentUser ? <DeleteIcon /> : null }
+        </header>
+        <p style={ textOptions(message.text) } className="Message__text">{messageText(message.text)}
+          <time className="Message__date">{translateDate(message.date)}</time>
+        </p>
+      </div>
+      <br />
     </div>
   );
 };

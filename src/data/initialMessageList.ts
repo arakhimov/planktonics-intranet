@@ -2,7 +2,7 @@ import { messageList } from '../types';
 
 const today:Date = new Date();
 
-export const initialMessageList:messageList = {
+export const initialMessageList: messageList = {
   'general': {
     users: [
       {
@@ -30,7 +30,7 @@ export const initialMessageList:messageList = {
       {
         date: today.getTime(),
         author: 'piligrim',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
         id: '0003'
       },
       {
@@ -42,7 +42,7 @@ export const initialMessageList:messageList = {
       {
         date: today.getTime(),
         author: 'piligrim',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore',
         id: '0005'
       }
     ]

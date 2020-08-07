@@ -1,27 +1,40 @@
+@font-face {
+  font-family: 'Comic Sans MS';
+  font-style:  normal;
+  font-weight: normal;
+  src: url('../../fonts/Comic_Sans_MS.ttf') format('trueType');
+}
+
 .Messanger {
   width: 80vw;
   max-width: 1440px;
-  min-height: 95vh;
+  height: 95vh;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
+  color: #fef6eb;
+  background-color: #1c1d25;
+  position: relative;
+  font-family: 'Comic Sans MS', Tahoma, Verdana, sans-serif;
 }
 
 .Messanger__header {
   height: 80px;
   box-sizing: border-box;
-  background-color: steelblue;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  border: 1px solid #fef6eb;
 }
 
 .Messanger__main {
   display: flex;
   flex-grow: 2;
-  background-color: tomato;
   border-radius: 10px;
 }
 
@@ -29,9 +42,10 @@
   height: 80px;
   padding: 20px;
   box-sizing: border-box;
-  background-color: steelblue;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 10px;
+  border: 1px solid #fef6eb;
 }
