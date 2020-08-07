@@ -6,8 +6,10 @@
 
 ## Для запуска проекта необходимо в режиме разработки необходимо выполнить команды:
 
-git clone [https://github.com/arakhimov/planktonics-intranet.git]
+git clone https://github.com/arakhimov/planktonics-intranet.git
+
 npm install
+
 npm start
 
 ## Описание проекта
