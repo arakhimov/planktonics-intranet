@@ -19,8 +19,6 @@ export class DataStorage implements DataStorageProps {
     this.messageList = messageList;
     this.nameActiveChat = localStorage.nameActiveChat || chatList[0].name;
     this.currentUser = localStorage.currentUser || '';
-    // localStorage.clear();
-    // console.log(JSON.parse(localStorage.messageList));
   }
 
   // инициализация localStorage - сохраняем список чатов, сообщения всех чатов и имя активного чата для добавления сообщений

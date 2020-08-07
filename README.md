@@ -1,44 +1,64 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Planktonics Intranet
 
-## Available Scripts
+## Проект опубликован по адресу: 
 
-In the project directory, you can run:
+[https://arakhimov.github.io/planktonics-intranet](https://arakhimov.github.io/planktonics-intranet)
 
-### `npm start`
+## Для запуска проекта необходимо в режиме разработки необходимо выполнить команды:
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+git clone [https://github.com/arakhimov/planktonics-intranet.git]
+npm install
+npm start
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Описание проекта
 
-### `npm test`
+Корпоративная сеть компании Planktonics. Содержит два раздела: 
+GENERAL - для обсуждения рабочих вопросов и 
+COMMUNICATIONS - для свободного общения.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+В каждом разделе отображается список текущих сообщений с возможностью отправки сообщений и 
+удаления отправленных сообщений. 
 
-### `npm run build`
+Также предусмотрена возможность форматирования текста сообщений. Используюте следующие символы 
+в начале и конце строки для форматирования:
+*текст* - для жирного теста
+_текст_ - для курсивного текста
+~текст~ - для зачеркнутого текста
+```текст```- для моноширинного текста
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+В приложении предусмотрена возможность авторизации пользователя по имени и паролю. 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Структура проекта:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+При первой загрузке пользователь попадает на страницу авторизации - адрес в адресной строке domain/auth.
+В проекте предусмотрена простейшая авторизация - наличие непустых полей имени и пароля. За авторизацию 
+отвечает компонент AutorizationForm и настроен Route paht="/auth". 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Также при первой загрузке в localStorage - сохраняютя исходные списки чатов и сообщений всех чатов.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+После успешного прохождения авторизации через history.push меняется адрес на domain/messenger и отображаюсякомпоненты:
+ChatList - список доступных чатов,
+ChatListItem - элементы списка чатов,
+Chat - чат без отображаемых сообщений.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Список сообщений чата добавляется после выбора нужного чата из списка. По клику на требуемый чат - компонент ChatListItem 
+через callback передаем имя выбранного чата родительскому компоненту Messenger, который в свою очередь через props 
+передает список сообщению другому дочернему компоненту Chat. После этого доступен список сообщений. При выборе текущего чата
+из localStorage в state компонента Messenger загружаются сообщения данного чата. При выборе другого чата происходит изменение
+state и соответсвенно изменяется список сообщений. 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+В приложении предусмотрена возможность добавления сообщений. Для этого используется компонент AddMessageForm, который доступен
+при выборе одного из чатов. У пользователя есть возможность отправлять сообщения клавишей Enter или по клику на кнопку отправить.
+Предумотрен запрет отправки пустых сообщений. 
 
-## Learn More
+При добавлении нового сообщения текст сообщения через callback передается компоненту Messenger и через функциональный state 
+происходит обновление состояния state и изменение текущего списка сообщений для данного чата в localStorage.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Также предусмотрена возможность удаления сообщении по клику на иконку удалить, которая добавляется только для отправленных
+данных пользователем сообщений. При клике аналогично функционально обновляется state и значение localStarage.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+У пользователя имееется возможность форматирования сообщении добавлением специальных символов в начало и конец строки. 
+Для нахождения символов форматирования используются регулярные выражения.
+
+### Использумые технологии: HTML, CSS, GIT, JS, React, Typescript, Webpack.

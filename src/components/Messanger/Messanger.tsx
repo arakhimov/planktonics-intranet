@@ -61,9 +61,7 @@ export class Messanger extends Component<RouteComponentProps>  {
         users: prevState.messageList.users,
         messages: prevState.messageList.messages.filter(message => message.id !== idMessage)
       }
-    }), () => {
-      dataStorage.setStorage(this.state.nameCurrentChat, this.state.messageList)
-    });
+    }), () => dataStorage.setStorage(this.state.nameCurrentChat, this.state.messageList));
   }
 
   // сохранение текущего user после входа в систему во всех чатах в localStorage
@@ -95,6 +93,7 @@ export class Messanger extends Component<RouteComponentProps>  {
             <h2 className="Messanger__author">&copy;arakhimov</h2>
           </footer>
         </Route>
-      </div>);
+      </div>
+    );
   }
 };

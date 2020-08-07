@@ -1,16 +1,7 @@
 import React from 'react';
 import './DeleteIcon.css';
 
-// type DeleteIconProps = {
-//   messageId: string,
-//   deleteMessage: (idMessage: string) => void,
-// };
-
 export const DeleteIcon: React.FC = () => {
-
-  // const handleClickDelete = (event: React.MouseEvent<HTMLOrSVGElement>) => {
-  //   deleteMessage(messageId);
-  // }
 
   return(
     <svg className="DeleteIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39 47.9">

@@ -16,7 +16,7 @@ export const ChatListItem:React.FC<ChatListItemProps & RouteComponentProps> = ({
     getSelectChatId(chatName);
   }
 
-  // класс active для активного чата
+  // добавление класса active для активного чата
   const classNameActiveChat = () => {
     return chat.name === history.location.pathname.replace(/\/messenger\/chats\/(.*)/, '$1') ? "ChatListItem ChatListItem_active" : "ChatListItem";
   }
@@ -24,11 +24,7 @@ export const ChatListItem:React.FC<ChatListItemProps & RouteComponentProps> = ({
   return (
     <div onClick={ () => handleClick(chat.name) } className={ classNameActiveChat() }>
       <img src={ chat.imageUrl } alt="" className="ChatListItem__image"/>
-      {/* <div className="ChatListItem__description"> */}
-        {/* <div className="ChatListItem__wrapper"> */}
-          <h3 className="ChatListItem__name">{ chat.name }</h3>
-        {/* </div> */}
-      {/* </div> */}
+      <h3 className="ChatListItem__name">{ chat.name }</h3>
     </div>
   );
 };

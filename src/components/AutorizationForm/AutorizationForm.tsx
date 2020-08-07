@@ -20,6 +20,7 @@ export class AutorizationForm extends Component<RouteComponentProps & Autorizati
     validity: false,
   };
 
+  // валидация обоих полей
   inputValidity = () => {
     if (this.state.login.length > 0 && this.state.password.length > 0) {
       this.setState( () => ({validity: true}) );
