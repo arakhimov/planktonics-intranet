@@ -71,18 +71,12 @@ export class Messanger extends Component<RouteComponentProps>  {
     dataStorage.addCurrentUser(user);
   }
 
-  changeStartUrl = () => this.props.history.push('/planktonics-intranet/auth');
-
   render() {
 
-    // при первой загрузке назначаем стартовой странице url home
-    if (!/messenger/.test(this.props.history.location.pathname)) {
-      this.changeStartUrl();
-    }
 
     return (
       <div className="Messanger">
-        <Route path="/planktonics-intranet/auth"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
+        <Route exact path="/planktonics-intranet"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
         <Route path="/planktonics-intranet/messenger">
           <header className="Messanger__header">
             <h1 className="Messanger__title">Planktonics Intranet</h1>
