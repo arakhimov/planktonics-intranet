@@ -74,7 +74,7 @@ export class Messanger extends Component<RouteComponentProps>  {
   render() {
 
     if (!/messenger.*/.test(this.props.history.location.pathname)) {
-      this.props.history.push('/auth');
+      this.props.history.push('/planktonics-intranet/auth');
     }
 
     return (
