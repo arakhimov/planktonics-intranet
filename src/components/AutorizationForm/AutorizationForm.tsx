@@ -41,7 +41,7 @@ export class AutorizationForm extends Component<RouteComponentProps & Autorizati
   handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (this.state.validity) {
-      this.props.history.push('/messenger');
+      this.props.history.push('/planktonics-intranet/messenger');
     }
     this.props.getCurrentUser(this.state.login);
   }

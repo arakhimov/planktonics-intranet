@@ -12,7 +12,7 @@ type ChatListItemProps = {
 export const ChatListItem:React.FC<ChatListItemProps & RouteComponentProps> = ({ chat, history, getSelectChatId }) => {
 
   const handleClick = (chatName: string) => {
-    history.push(`/messenger/chats/${chatName}`);
+    history.push(`/planktonics-intranet/messenger/chats/${chatName}`);
     getSelectChatId(chatName);
   }
 
