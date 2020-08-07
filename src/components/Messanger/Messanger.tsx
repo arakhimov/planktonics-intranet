@@ -74,7 +74,7 @@ export class Messanger extends Component<RouteComponentProps>  {
   render() {
     return (
       <div className="Messanger">
-        <Route path="/auth"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
+        <Route path="/"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
         <Route path="/messenger">
           <header className="Messanger__header">
             <h1 className="Messanger__title">Planktonics Intranet</h1>

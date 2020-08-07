@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4070a1985304e65f2b42430d2e13880c",
+    "revision": "3000d709f1d83f19bc9cb827c7834ff6",
     "url": "/planktonics-intranet/auth/index.html"
   },
   {
-    "revision": "dd1c8b12c08b2317639b",
+    "revision": "94812689ab410df1c864",
     "url": "/planktonics-intranet/auth/static/css/main.1c906e3b.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/planktonics-intranet/auth/static/js/2.3f390e4b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "dd1c8b12c08b2317639b",
-    "url": "/planktonics-intranet/auth/static/js/main.58611769.chunk.js"
+    "revision": "94812689ab410df1c864",
+    "url": "/planktonics-intranet/auth/static/js/main.85828352.chunk.js"
   },
   {
     "revision": "7cec1d43eca255f3b14c",
