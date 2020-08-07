@@ -18,7 +18,7 @@ export const ChatListItem:React.FC<ChatListItemProps & RouteComponentProps> = ({
 
   // добавление класса active для активного чата
   const classNameActiveChat = () => {
-    return chat.name === history.location.pathname.replace(/\/messenger\/chats\/(.*)/, '$1') ? "ChatListItem ChatListItem_active" : "ChatListItem";
+    return chat.name === history.location.pathname.replace(/.*\/chats\/(.*)/, '$1') ? "ChatListItem ChatListItem_active" : "ChatListItem";
   }
 
   return (
