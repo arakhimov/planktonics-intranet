@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/planktonics-intranet/auth/static/css/main.1c906e3b.chunk.css",
-    "main.js": "/planktonics-intranet/auth/static/js/main.85828352.chunk.js",
-    "main.js.map": "/planktonics-intranet/auth/static/js/main.85828352.chunk.js.map",
-    "runtime-main.js": "/planktonics-intranet/auth/static/js/runtime-main.6b77d039.js",
-    "runtime-main.js.map": "/planktonics-intranet/auth/static/js/runtime-main.6b77d039.js.map",
-    "static/js/2.3f390e4b.chunk.js": "/planktonics-intranet/auth/static/js/2.3f390e4b.chunk.js",
-    "static/js/2.3f390e4b.chunk.js.map": "/planktonics-intranet/auth/static/js/2.3f390e4b.chunk.js.map",
-    "index.html": "/planktonics-intranet/auth/index.html",
-    "precache-manifest.3924bae3b81306692ea5edaca5a9370d.js": "/planktonics-intranet/auth/precache-manifest.3924bae3b81306692ea5edaca5a9370d.js",
-    "service-worker.js": "/planktonics-intranet/auth/service-worker.js",
-    "static/css/main.1c906e3b.chunk.css.map": "/planktonics-intranet/auth/static/css/main.1c906e3b.chunk.css.map",
-    "static/js/2.3f390e4b.chunk.js.LICENSE.txt": "/planktonics-intranet/auth/static/js/2.3f390e4b.chunk.js.LICENSE.txt",
-    "static/media/Messanger.css": "/planktonics-intranet/auth/static/media/Comic_Sans_MS.a50f9c96.ttf"
+    "main.css": "/planktonics-intranet/static/css/main.5294b775.chunk.css",
+    "main.js": "/planktonics-intranet/static/js/main.85828352.chunk.js",
+    "main.js.map": "/planktonics-intranet/static/js/main.85828352.chunk.js.map",
+    "runtime-main.js": "/planktonics-intranet/static/js/runtime-main.3dfc4b8e.js",
+    "runtime-main.js.map": "/planktonics-intranet/static/js/runtime-main.3dfc4b8e.js.map",
+    "static/js/2.3f390e4b.chunk.js": "/planktonics-intranet/static/js/2.3f390e4b.chunk.js",
+    "static/js/2.3f390e4b.chunk.js.map": "/planktonics-intranet/static/js/2.3f390e4b.chunk.js.map",
+    "index.html": "/planktonics-intranet/index.html",
+    "precache-manifest.a62540cccef27be942f691e18aaf6bbd.js": "/planktonics-intranet/precache-manifest.a62540cccef27be942f691e18aaf6bbd.js",
+    "service-worker.js": "/planktonics-intranet/service-worker.js",
+    "static/css/main.5294b775.chunk.css.map": "/planktonics-intranet/static/css/main.5294b775.chunk.css.map",
+    "static/js/2.3f390e4b.chunk.js.LICENSE.txt": "/planktonics-intranet/static/js/2.3f390e4b.chunk.js.LICENSE.txt",
+    "static/media/Messanger.css": "/planktonics-intranet/static/media/Comic_Sans_MS.a50f9c96.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.6b77d039.js",
+    "static/js/runtime-main.3dfc4b8e.js",
     "static/js/2.3f390e4b.chunk.js",
-    "static/css/main.1c906e3b.chunk.css",
+    "static/css/main.5294b775.chunk.css",
     "static/js/main.85828352.chunk.js"
   ]
 }
