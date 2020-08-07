@@ -74,7 +74,7 @@ export class Messanger extends Component<RouteComponentProps>  {
   render() {
 
     if (!/messenger.*/.test(this.props.history.location.pathname)) {
-      this.props.history.push('/messenger');
+      this.props.history.push('/auth');
     }
 
     return (
