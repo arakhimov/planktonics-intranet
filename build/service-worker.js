@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/planktonics-intranet/precache-manifest.a62540cccef27be942f691e18aaf6bbd.js"
+  "/planktonics-intranet/precache-manifest.523254f78a7ca327f95b118cf4429a86.js"
 );
 
 self.addEventListener('message', (event) => {
