@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/planktonics-intranet/static/css/main.5294b775.chunk.css",
+    "main.css": "/planktonics-intranet/static/css/main.95595935.chunk.css",
     "main.js": "/planktonics-intranet/static/js/main.c2e6881c.chunk.js",
     "main.js.map": "/planktonics-intranet/static/js/main.c2e6881c.chunk.js.map",
     "runtime-main.js": "/planktonics-intranet/static/js/runtime-main.3dfc4b8e.js",
@@ -8,16 +8,16 @@
     "static/js/2.3f390e4b.chunk.js": "/planktonics-intranet/static/js/2.3f390e4b.chunk.js",
     "static/js/2.3f390e4b.chunk.js.map": "/planktonics-intranet/static/js/2.3f390e4b.chunk.js.map",
     "index.html": "/planktonics-intranet/index.html",
-    "precache-manifest.245f08ec275234d95ec914409b75dfa4.js": "/planktonics-intranet/precache-manifest.245f08ec275234d95ec914409b75dfa4.js",
+    "precache-manifest.1e49fe24494271fcd966feb1d8412301.js": "/planktonics-intranet/precache-manifest.1e49fe24494271fcd966feb1d8412301.js",
     "service-worker.js": "/planktonics-intranet/service-worker.js",
-    "static/css/main.5294b775.chunk.css.map": "/planktonics-intranet/static/css/main.5294b775.chunk.css.map",
+    "static/css/main.95595935.chunk.css.map": "/planktonics-intranet/static/css/main.95595935.chunk.css.map",
     "static/js/2.3f390e4b.chunk.js.LICENSE.txt": "/planktonics-intranet/static/js/2.3f390e4b.chunk.js.LICENSE.txt",
     "static/media/Messanger.css": "/planktonics-intranet/static/media/Comic_Sans_MS.a50f9c96.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.3dfc4b8e.js",
     "static/js/2.3f390e4b.chunk.js",
-    "static/css/main.5294b775.chunk.css",
+    "static/css/main.95595935.chunk.css",
     "static/js/main.c2e6881c.chunk.js"
   ]
 }

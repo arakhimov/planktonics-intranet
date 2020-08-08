@@ -1,7 +1,7 @@
 .Message {
   background-color: steelblue;
   display: inline-block;
-  max-width: 700px;
+  max-width: 80%;
   padding: 5px 10px;
   border-radius: 10px;
   flex-shrink: 2;
