@@ -21,10 +21,19 @@ type stateProps = {
 
 export class Messanger extends Component<RouteComponentProps>  {
 
+  // состояние state изменяется при любом из событий - либо кликаем по другому чату, либо меняем адрес в адресной строке
+  initStateMessage = () => {
+    if (/general|communications/.test(this.props.location.pathname)) {
+      return dataStorage.getMessageList()[this.props.location.pathname.replace(/.*\/chats\/(.*)/, '$1')];
+    } else {
+      return dataStorage.getMessageList()[dataStorage.getNameActiveChat()] || {users: [], messages: []};
+    }
+  }
+
   // список сообщений, отображаемых в чате получаем из state, который может быть изменен либо при выборе другого чата, 
   // либо после добавления сообщений
   state: stateProps = {
-    messageList:  dataStorage.getMessageList()[dataStorage.getNameActiveChat()] || {users: [], messages: []},
+    messageList:  this.initStateMessage(),
     nameCurrentChat: dataStorage.getNameActiveChat() || '',
     currentUser: dataStorage.getCurrentUser() || ''
   };
@@ -74,7 +83,7 @@ export class Messanger extends Component<RouteComponentProps>  {
   render() {
     return (
       <div className="Messanger">
-        <Route path="/auth"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
+        <Route exact path="/"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
         <Route path="/messenger">
           <header className="Messanger__header">
             <h1 className="Messanger__title">Planktonics Intranet</h1>
