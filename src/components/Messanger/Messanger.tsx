@@ -23,6 +23,7 @@ export class Messanger extends Component<RouteComponentProps>  {
 
   // состояние state изменяется при любом из событий - либо кликаем по другому чату, либо меняем адрес в адресной строке
   initStateMessage = () => {
+    console.log(dataStorage.getMessageList()[this.props.location.pathname.replace(/.*\/chats\/(.*)/, '$1')]);
     if (/general|communications/.test(this.props.location.pathname)) {
       return dataStorage.getMessageList()[this.props.location.pathname.replace(/.*\/chats\/(.*)/, '$1')];
     } else {
@@ -91,7 +92,7 @@ export class Messanger extends Component<RouteComponentProps>  {
           </header>
           <main className="Messanger__main">
             <ChatList {...this.props} chats={ dataStorage.getChatList() } getSelectChatId={ this.setMessageList } />
-            <Route path="planktonics-intranet/messenger/chats">
+            <Route path="/planktonics-intranet/messenger/chats">
               <Chat messageList={ this.state.messageList } 
                     addMessage={ this.addNewMessage }
                     deleteMessage={ this.deleteMessage } 
