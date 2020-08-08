@@ -33,7 +33,7 @@ export class Messanger extends Component<RouteComponentProps>  {
   // список сообщений, отображаемых в чате получаем из state, который может быть изменен либо при выборе другого чата, 
   // либо после добавления сообщений
   state: stateProps = {
-    messageList:  dataStorage.getMessageList()[dataStorage.getNameActiveChat()] || {users: [], messages: []},
+    messageList:  this.initStateMessage(),
     nameCurrentChat: dataStorage.getNameActiveChat() || '',
     currentUser: dataStorage.getCurrentUser() || ''
   };
@@ -81,19 +81,17 @@ export class Messanger extends Component<RouteComponentProps>  {
   }
 
   render() {
-
-
     return (
       <div className="Messanger">
-        <Route exact path="/planktonics-intranet"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
-        <Route path="/planktonics-intranet/messenger">
+        <Route exact path="/"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
+        <Route path="/messenger">
           <header className="Messanger__header">
             <h1 className="Messanger__title">Planktonics Intranet</h1>
             <h2 className="Messanger__user">{this.state.currentUser}</h2>
           </header>
           <main className="Messanger__main">
             <ChatList {...this.props} chats={ dataStorage.getChatList() } getSelectChatId={ this.setMessageList } />
-            <Route path={ this.props.location.pathname }>
+            <Route path="/messenger/chats">
               <Chat messageList={ this.state.messageList } 
                     addMessage={ this.addNewMessage }
                     deleteMessage={ this.deleteMessage } 
