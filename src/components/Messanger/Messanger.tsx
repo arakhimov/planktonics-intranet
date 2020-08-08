@@ -83,15 +83,15 @@ export class Messanger extends Component<RouteComponentProps>  {
   render() {
     return (
       <div className="Messanger">
-        <Route exact path="/"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
-        <Route path="/messenger">
+        <Route exact path="/planktonics-intranet"><AutorizationForm {...this.props} getCurrentUser={ this.getcurrentUser } /></Route>
+        <Route path="/planktonics-intranet/messenger">
           <header className="Messanger__header">
             <h1 className="Messanger__title">Planktonics Intranet</h1>
             <h2 className="Messanger__user">{this.state.currentUser}</h2>
           </header>
           <main className="Messanger__main">
             <ChatList {...this.props} chats={ dataStorage.getChatList() } getSelectChatId={ this.setMessageList } />
-            <Route path="/messenger/chats">
+            <Route path="planktonics-intranet/messenger/chats">
               <Chat messageList={ this.state.messageList } 
                     addMessage={ this.addNewMessage }
                     deleteMessage={ this.deleteMessage } 
